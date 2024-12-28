@@ -1,0 +1,321 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    background: linear-gradient(to right, #2a8b97, #8a1640);
+    color: #f5f5f5;
+    font-family: "UnifrakturCook", cursive;
+    font-weight: 700;
+    font-style: normal;
+  
+}
+
+.vast-shadow-regular {
+    font-family: "UnifrakturCook", cursive;
+        font-weight: 400;
+    font-style: normal;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.home {
+    background: linear-gradient(to right, #03515c, #e52e71);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.home .background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.welcome-text {
+    font-size: 2rem;
+    color: #fff;
+    animation: welcomeAnimation 3s infinite alternate;
+    z-index: 1;
+    font-family: "UnifrakturCook", cursive;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+@keyframes welcomeAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+.main-image {
+    max-width: 300px;
+    width: 100%;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.main-image:hover {
+    transform: rotate(5deg) scale(1.1);
+}
+
+.text-animation {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.text-part {
+    font-size: 2.5rem;
+    animation: textFadeIn 1s ease-out forwards;
+    background: #e52e71;
+    padding: 10px;
+    border-radius: 10px;
+    transform: rotate(-10deg);
+}
+
+#text-goto {
+    animation-delay: 0.5s;
+}
+
+#text-cats {
+    animation-delay: 1s;
+    transform: rotate(10deg);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right, #03515c, #e52e71);
+    margin: 40px 0;
+}
+
+.content-box {
+    background: linear-gradient(to right, #032a5c, #d02ee5);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #03515c, #e52e71);
+    transition: transform 0.3s ease-in-out;
+}
+
+.content-box:hover {
+    transform: scale(1.05);
+}
+
+.images-top, .images-side {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    position: relative;
+}
+
+.images-top img, .images-side img {
+    max-width: 190px;
+    margin: 10px;
+    transition: transform 0.2s ease-in-out;
+    animation: swapImage 6s infinite;
+}
+
+.images-top img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.images-top img:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.images-side img {
+    animation-delay: 4s;
+}
+
+.section-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertikal center */
+    align-items: center; /* Horizontal center */
+    height: 80vh; /* Memastikan section mengisi seluruh tinggi viewport */
+    text-align: center;
+}
+
+.scroll-text {
+    font-size: 3rem; /* Ukuran font sesuai kebutuhan */
+    opacity: 0; /* Mulai dengan teks tersembunyi */
+    transform: translateY(80px); /* Posisi awal teks */
+    transition: opacity 0.10s ease-out, transform 0.10s ease-out; /* Transisi untuk animasi */
+}
+
+.scroll-text.show {
+    opacity: 1; /* Teks terlihat */
+    transform: translateY(0); /* Posisi akhir teks */
+}
+
+.vast-shadow-regular {
+    font-family: "Vast Shadow", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+.section-4 {
+    background: linear-gradient(to right, #2191a0, #974865);
+    padding: 40px 20px;
+}
+
+.section-4 .image-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.section-4 .image-row img {
+    max-width: 100px;
+    margin: 10px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.section-4 .image-row img.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.section-4 .text-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.section-4 .text-box .image-left,
+.section-4 .text-box .image-center,
+.section-4 .text-box .image-right {
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.section-4 .text-box img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes swapImage {
+    0% {
+        transform: translate(0, 0);
+    }
+    33% {
+        transform: translate(50px, 0);
+    }
+    66% {
+        transform: translate(50px, 50px);
+    }
+    100% {
+        transform: translate(0, 50px);
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-text {
+        font-size: 3rem;
+    }
+
+    .text-part {
+        font-size: 1.5rem;
+    }
+
+    .content-box {
+        width: 80%;
+    }
+
+    .images-top img, .images-side img {
+        max-width: 80px;
+    }
+
+    .section-3 .scroll-text {
+        font-size: 1.5rem;
+    }
+
+    .section-4 .image-row img {
+        max-width: 80px;
+    }
+
+    .section-4 .text-box {
+        flex-direction: column;
+    }
+
+    .section-4 .text-box .image-left,
+    .section-4 .text-box .image-center,
+    .section-4 .text-box .image-right {
+        margin: 10px 0;
+    }
+}
+
+#copy-button {
+    background-color: #8b0eff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 9px;
+    margin-top: 10px;
+    font-family: "UnifrakturCook", cursive;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+#copy-button:hover {
+    background-color: #f79b9b;
+}
+
+#copy-text{
+    background-color: #8b0eff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 9px;
+    margin-top: 10px;
+    font-family: "UnifrakturCook", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
